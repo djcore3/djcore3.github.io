@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="common.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+</head>
+<body class="body-blue">
+
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+	
+	<div class="device_select-container">
+		<div class="device_select">
+
+			<!-- option start -->
+			<div class="device_select-option device-option" id="device-option_mobile">
+				<div class="device-option_icon-container">
+					<div class="device-option_icon-wrapper">
+						<div class="device-option_svg-icon device-option_mobile-icon"></div>
+					</div>
+				</div>
+				<div class="device-option_name">mobile</div>
+				<div class="device-option_description">Get notifications about new releases in our mobile app.</div>
+				<div class="device-option_price">10</div>
+			</div>
+			<!-- option end -->
+
+			<!-- option start -->
+			<div class="device_select-option device-option" id="device-option_laptop">
+				<div class="device-option_icon-container">
+					<div class="device-option_icon-wrapper">
+						<div class="device-option_svg-icon device-option_laptop-icon"></div>
+					</div>
+				</div>
+				<div class="device-option_name">desktop</div>
+				<div class="device-option_description">Enjoy new episodes on your laptop in browser with our web sevice, which supports all the platforms.</div>
+				<div class="device-option_price">15</div>
+			</div>
+			<!-- option end -->
+
+			<!-- option start -->
+			<div class="device_select-option device-option" id="device-option_tv">
+				<div class="device-option_icon-container">
+					<div class="device-option_icon-wrapper">
+						<div class="device-option_svg-icon device-option_tv-icon"></div>
+					</div>
+				</div>
+				<div class="device-option_name">tv</div>
+				<div class="device-option_description">Watch your favorite series at home on large screen with our TV application.</div>
+				<div class="device-option_price">20</div>
+			</div>
+			<!-- option end -->
+
+		</div>
+	</div>
+
+	<!-- popup start -->
+	<div class="popup-container">
+		<div class="popup-window">
+			<div class="popup-window_close-button"></div>
+			<div class="popup-window_title">Confirmation:</div>
+			<div class="popup-template-slot">
+				<!-- popup div goes here -->
+			</div>
+		</div>
+	</div>
+	<!-- popup end -->
+
+	<!-- custom html templates start -->
+
+		<!-- sevice-select confirmation popup start -->
+		<div class="html-template" id="device-select-popup-template">
+			<div class="device-select-popup_form">
+				<div class="device-select-popup">
+					<div class="device_select-option device-option device-option_in-popup">
+						<div class="device-option_icon-container">
+							<div class="device-option_icon-wrapper">
+								<div class="device-option_svg-icon {{svg-icon-class}}"></div>
+							</div>
+						</div>
+						<div class="device-option_name">{{name}}</div>
+						<div class="device-option_description">{{description}}</div>
+						<div class="device-option_price">{{price}}</div>
+					</div>
+				</div>
+				<input class="btn-std" type="submit" value="Confirm and pay">
+			</div>
+		</div>
+		<!-- sevice-select confirmation popup end -->
+
+	<!-- custom html templates end -->
+
+	<script src="index.js"></script>
+	<script src="extra.js"></script>
+
+</body>
+</html>

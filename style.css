@@ -1,0 +1,278 @@
+/*
+	## global things
+	## device select container
+	## device select option
+	#### device select specific options
+	#### device select popup
+	## popup
+	## media >600px
+	## media >900px
+*/
+ 
+/* ## global things */
+
+.body-blue {
+	background-color: #85a5d4;
+}
+
+.btn-std {
+	padding: 9px 50px;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	text-align: center;
+	background-color: #295aff;
+	cursor: pointer;
+}
+
+.btn-std:hover {
+	background: #3866ff;
+}
+
+.html-template {
+	display: none;
+}
+
+/* ## device select container */
+
+.device_select-container {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 100%;
+	width: 100wh;	
+	padding: 20px;
+	border-radius: 5px;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #fff;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+	transition: width 0.1s ease-out;
+}
+
+.device_select {
+	position: relative;
+	height: auto;
+	width: 100%;
+}
+
+/* its also the .device-option block */
+.device_select-option {
+	box-sizing: border-box;
+	position: relative;
+	height: 100%;
+	width: 100%; /* width of column in percents */
+	border-bottom: 1px solid #eee;
+	cursor: pointer;
+}
+
+/* ## device select option */
+
+.device-option {
+	background-color: #fff;
+}
+
+/* warning! increased specifity */
+.device-option.device-option_in-popup {
+	background-color: #fff;
+	width: 350px;
+	cursor: default;
+}
+
+.device-option:hover {
+	background-color: #f4f4f3;
+}
+
+/* warning! increased specifity */
+.device-option.device-option_in-popup:hover {
+	background-color: #fff;
+}
+
+.device-option_icon-container {
+	position: relative;
+	height: 100px;
+}
+
+.device-option_svg-icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.device-option_name {
+	position: relative;
+	margin-top: 10px;
+	color: #4a70d6;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 1.2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.device-option_description {
+	position: relative;
+	left: 15%;
+	width: 70%;
+	margin-top: 10px;
+	font-size: 0.8rem;
+	text-align: center;
+	color: #a9a6a3;	
+}
+
+.device-option_price {
+	position: relative;
+	margin: 10px 0 20px 0;
+	color: #4a70d6;
+	font-size: 1.8rem;
+	text-align: center;
+}
+
+.device-option_price:before {
+	content: '$';
+	right: 100%;
+	padding: 2px;
+	font-weight: normal;
+	font-size: 1rem;
+	font-style: 1.1rem;
+	line-height: 2rem;
+	vertical-align: top;
+}
+
+.device-option_price:after {
+	content: '/month';
+	left: 100%;
+	bottom: 0;
+	font-weight: normal;
+	font-size: 0.8rem;
+}
+
+/* #### device select specific options */
+
+.device-option_mobile-icon {
+	background: url(img/device.svg);
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 60px;
+	height: 60px;
+}
+
+.device-option_laptop-icon {
+	background: url(img/laptop.svg);
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 60px;
+	height: 60px;
+}
+
+.device-option_tv-icon {
+	background: url(img/monitor.svg);
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 60px;
+	height: 60px;
+}
+
+/* #### device select popup */
+
+.device-select-popup {
+}
+
+.device-select-popup_form {
+	text-align: center;
+}
+
+/* ## popup */
+
+.popup-container {
+	display: none;
+	position: fixed;
+	width: 100%;
+	width: 100vw;
+	height: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: rgba(0, 0, 0, 0.0);
+	transition: background-color 0.2s ease-out;
+}
+
+.popup-container.show {
+	display: block;
+}
+
+.popup-window {
+	position: absolute;
+	left: 50%;
+	top: 200px;
+	top: 20vh;
+	padding: 20px 15px;
+	transform: translate(-50%, 0);
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+	transition: margin 0.15s ease-out, opacity 0.15s ease-out;
+}
+
+.popup-window_close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 12px;
+	height: 17px;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background: url(img/cross.svg);
+	cursor: pointer;
+	z-index: 1;
+}
+
+.popup-window_close-button:hover {
+	top: 9px;
+	right: 9px;
+	width: 14px;
+	height: 20px;
+}
+
+.popup-window_close-button:active {
+	top: 11px;
+}
+
+.popup-window_title {
+	position: relative;
+	margin: 10px 0 10px 0;
+	font-weight: bold;
+	text-align: center;	
+}
+
+/* ## media >600px */
+
+@media (min-width: 600px) {
+
+	.device_select {
+    	height: 260px;
+	}
+
+	.device_select-option {
+		float: left;
+		width: 33.3%; /* width of column in percents */
+		border-bottom: none;
+	}
+
+	.device_select-container {
+		top: 90px;
+	}
+
+}
+
+/* ## media >900px */
+
+@media (min-width: 900px) {
+
+	.device_select-container {
+		width: 800px;
+	}
+
+}
